@@ -1,0 +1,1 @@
+cp ./node-github-patch/* ./node_modules/github/lib

@@ -1,0 +1,10 @@
+{
+  "numRepos": 10
+,"repoNamePrefix": "rtTest"
+,"rtHost": "localhost"
+,"rtPort": 3000
+,"repoOwner":"repoRequestTest"
+,"repoRequestor":"admackbar"
+,"repoConfig":"default"
+,"timeout":60
+}

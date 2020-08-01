@@ -1,0 +1,22 @@
+{
+   "configName": "simple",
+   "configType": "repository",
+   "owningOrganization": "bryancross",
+   "repositoryAttributes": {
+     "name": "simple",
+     "description": "Simple description",
+     "homepage": "https://github.com",
+     "private": false,
+     "has_issues": true,
+     "has_projects": true,
+     "has_wiki": true,
+     "auto_init": false,
+     "gitignore_template": "",
+     "license_template": "",
+     "allow_rebase_merge": true,
+     "has_downloads": true,
+     "allow_squash_merge": true,
+     "allow_merge_commit": true,
+     "team_id": -1
+  }
+}

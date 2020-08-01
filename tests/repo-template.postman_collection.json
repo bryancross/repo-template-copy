@@ -1,0 +1,633 @@
+{
+	"info": {
+		"_postman_id": "80769c70-619f-a033-3ad5-4e0f14a05c12",
+		"name": "repo-template",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "repo-template-tests",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "Reload Repo Configs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/loadRepoConfigs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"loadRepoConfigs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server Stop",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/resume",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"resume"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server Suspend",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/suspend",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"suspend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server Resume",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/resume",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"resume"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server Status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Repo",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "token XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.github.v3+json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://octodemo.com/api/v3/repos/rebelware/repoRequests",
+					"protocol": "https",
+					"host": [
+						"octodemo",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"repos",
+						"rebelware",
+						"repoRequests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Simulate PR Merge",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"action\":\"closed\",\n   \"number\":14,\n   \"pull_request\":{  \n      \"url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/pulls/14\",\n      \"id\":2983,\n      \"html_url\":\"https://octodemo.com/rebelware/repoRequests/pull/14\",\n      \"diff_url\":\"https://octodemo.com/rebelware/repoRequests/pull/14.diff\",\n      \"patch_url\":\"https://octodemo.com/rebelware/repoRequests/pull/14.patch\",\n      \"issue_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/issues/14\",\n      \"number\":14,\n      \"state\":\"closed\",\n      \"locked\":false,\n      \"title\":\"Repository creation request: aName\",\n      \"user\":{  \n         \"login\":\"admackbar\",\n         \"id\":388,\n         \"avatar_url\":\"https://avatars.octodemo.com/u/388?\",\n         \"gravatar_id\":\"\",\n         \"url\":\"https://octodemo.com/api/v3/users/admackbar\",\n         \"html_url\":\"https://octodemo.com/admackbar\",\n         \"followers_url\":\"https://octodemo.com/api/v3/users/admackbar/followers\",\n         \"following_url\":\"https://octodemo.com/api/v3/users/admackbar/following{/other_user}\",\n         \"gists_url\":\"https://octodemo.com/api/v3/users/admackbar/gists{/gist_id}\",\n         \"starred_url\":\"https://octodemo.com/api/v3/users/admackbar/starred{/owner}{/repo}\",\n         \"subscriptions_url\":\"https://octodemo.com/api/v3/users/admackbar/subscriptions\",\n         \"organizations_url\":\"https://octodemo.com/api/v3/users/admackbar/orgs\",\n         \"repos_url\":\"https://octodemo.com/api/v3/users/admackbar/repos\",\n         \"events_url\":\"https://octodemo.com/api/v3/users/admackbar/events{/privacy}\",\n         \"received_events_url\":\"https://octodemo.com/api/v3/users/admackbar/received_events\",\n         \"type\":\"User\",\n         \"site_admin\":false\n      },\n      \"body\":\"Repository creation request submitted via chat.  We could optionally include some text here as well from the requester\",\n      \"created_at\":\"2017-06-06T03:39:47Z\",\n      \"updated_at\":\"2017-06-06T15:19:27Z\",\n      \"closed_at\":\"2017-06-06T15:19:27Z\",\n      \"merged_at\":\"2017-06-06T15:19:27Z\",\n      \"merge_commit_sha\":\"ef8a9d576a76ef2a03a59b19ab4bdfe3a4208bef\",\n      \"assignee\":null,\n      \"assignees\":[  \n\n      ],\n      \"milestone\":null,\n      \"commits_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/pulls/14/commits\",\n      \"review_comments_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/pulls/14/comments\",\n      \"review_comment_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/pulls/comments{/number}\",\n      \"comments_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/issues/14/comments\",\n      \"statuses_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/statuses/b7aaf67b9df7308c11f44c0a8ab4b232d25214d7\",\n      \"head\":{  \n         \"label\":\"rebelware:someguy-aName-d8b58fd3d86316bc2fd4eedc759a8271fdf\",\n         \"ref\":\"someguy-aName-d8b58fd3d86316bc2fd4eedc759a8271fdf\",\n         \"sha\":\"b7aaf67b9df7308c11f44c0a8ab4b232d25214d7\",\n         \"user\":{  \n            \"login\":\"rebelware\",\n            \"id\":392,\n            \"avatar_url\":\"https://avatars.octodemo.com/u/392?\",\n            \"gravatar_id\":\"\",\n            \"url\":\"https://octodemo.com/api/v3/users/rebelware\",\n            \"html_url\":\"https://octodemo.com/rebelware\",\n            \"followers_url\":\"https://octodemo.com/api/v3/users/rebelware/followers\",\n            \"following_url\":\"https://octodemo.com/api/v3/users/rebelware/following{/other_user}\",\n            \"gists_url\":\"https://octodemo.com/api/v3/users/rebelware/gists{/gist_id}\",\n            \"starred_url\":\"https://octodemo.com/api/v3/users/rebelware/starred{/owner}{/repo}\",\n            \"subscriptions_url\":\"https://octodemo.com/api/v3/users/rebelware/subscriptions\",\n            \"organizations_url\":\"https://octodemo.com/api/v3/users/rebelware/orgs\",\n            \"repos_url\":\"https://octodemo.com/api/v3/users/rebelware/repos\",\n            \"events_url\":\"https://octodemo.com/api/v3/users/rebelware/events{/privacy}\",\n            \"received_events_url\":\"https://octodemo.com/api/v3/users/rebelware/received_events\",\n            \"type\":\"Organization\",\n            \"site_admin\":false\n         },\n         \"repo\":{  \n            \"id\":1086,\n            \"name\":\"repoRequests\",\n            \"full_name\":\"rebelware/repoRequests\",\n            \"owner\":{  \n               \"login\":\"rebelware\",\n               \"id\":392,\n               \"avatar_url\":\"https://avatars.octodemo.com/u/392?\",\n               \"gravatar_id\":\"\",\n               \"url\":\"https://octodemo.com/api/v3/users/rebelware\",\n               \"html_url\":\"https://octodemo.com/rebelware\",\n               \"followers_url\":\"https://octodemo.com/api/v3/users/rebelware/followers\",\n               \"following_url\":\"https://octodemo.com/api/v3/users/rebelware/following{/other_user}\",\n               \"gists_url\":\"https://octodemo.com/api/v3/users/rebelware/gists{/gist_id}\",\n               \"starred_url\":\"https://octodemo.com/api/v3/users/rebelware/starred{/owner}{/repo}\",\n               \"subscriptions_url\":\"https://octodemo.com/api/v3/users/rebelware/subscriptions\",\n               \"organizations_url\":\"https://octodemo.com/api/v3/users/rebelware/orgs\",\n               \"repos_url\":\"https://octodemo.com/api/v3/users/rebelware/repos\",\n               \"events_url\":\"https://octodemo.com/api/v3/users/rebelware/events{/privacy}\",\n               \"received_events_url\":\"https://octodemo.com/api/v3/users/rebelware/received_events\",\n               \"type\":\"Organization\",\n               \"site_admin\":false\n            },\n            \"private\":false,\n            \"html_url\":\"https://octodemo.com/rebelware/repoRequests\",\n            \"description\":null,\n            \"fork\":false,\n            \"url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests\",\n            \"forks_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/forks\",\n            \"keys_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/keys{/key_id}\",\n            \"collaborators_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/collaborators{/collaborator}\",\n            \"teams_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/teams\",\n            \"hooks_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/hooks\",\n            \"issue_events_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/issues/events{/number}\",\n            \"events_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/events\",\n            \"assignees_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/assignees{/user}\",\n            \"branches_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/branches{/branch}\",\n            \"tags_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/tags\",\n            \"blobs_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/git/blobs{/sha}\",\n            \"git_tags_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/git/tags{/sha}\",\n            \"git_refs_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/git/refs{/sha}\",\n            \"trees_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/git/trees{/sha}\",\n            \"statuses_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/statuses/{sha}\",\n            \"languages_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/languages\",\n            \"stargazers_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/stargazers\",\n            \"contributors_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/contributors\",\n            \"subscribers_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/subscribers\",\n            \"subscription_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/subscription\",\n            \"commits_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/commits{/sha}\",\n            \"git_commits_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/git/commits{/sha}\",\n            \"comments_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/comments{/number}\",\n            \"issue_comment_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/issues/comments{/number}\",\n            \"contents_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/contents/{+path}\",\n            \"compare_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/compare/{base}...{head}\",\n            \"merges_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/merges\",\n            \"archive_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/{archive_format}{/ref}\",\n            \"downloads_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/downloads\",\n            \"issues_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/issues{/number}\",\n            \"pulls_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/pulls{/number}\",\n            \"milestones_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/milestones{/number}\",\n            \"notifications_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/notifications{?since,all,participating}\",\n            \"labels_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/labels{/name}\",\n            \"releases_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/releases{/id}\",\n            \"deployments_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/deployments\",\n            \"created_at\":\"2017-06-05T17:54:01Z\",\n            \"updated_at\":\"2017-06-05T17:54:01Z\",\n            \"pushed_at\":\"2017-06-06T15:19:27Z\",\n            \"git_url\":\"git://octodemo.com/rebelware/repoRequests.git\",\n            \"ssh_url\":\"git@octodemo.com:rebelware/repoRequests.git\",\n            \"clone_url\":\"https://octodemo.com/rebelware/repoRequests.git\",\n            \"svn_url\":\"https://octodemo.com/rebelware/repoRequests\",\n            \"homepage\":null,\n            \"size\":11,\n            \"stargazers_count\":0,\n            \"watchers_count\":0,\n            \"language\":null,\n            \"has_issues\":true,\n            \"has_downloads\":true,\n            \"has_wiki\":true,\n            \"has_pages\":false,\n            \"forks_count\":0,\n            \"mirror_url\":null,\n            \"open_issues_count\":7,\n            \"forks\":0,\n            \"open_issues\":7,\n            \"watchers\":0,\n            \"default_branch\":\"master\"\n         }\n      },\n      \"base\":{  \n         \"label\":\"rebelware:master\",\n         \"ref\":\"master\",\n         \"sha\":\"f525a387c55b6ae391360e1e1c9294a59fdd2084\",\n         \"user\":{  \n            \"login\":\"rebelware\",\n            \"id\":392,\n            \"avatar_url\":\"https://avatars.octodemo.com/u/392?\",\n            \"gravatar_id\":\"\",\n            \"url\":\"https://octodemo.com/api/v3/users/rebelware\",\n            \"html_url\":\"https://octodemo.com/rebelware\",\n            \"followers_url\":\"https://octodemo.com/api/v3/users/rebelware/followers\",\n            \"following_url\":\"https://octodemo.com/api/v3/users/rebelware/following{/other_user}\",\n            \"gists_url\":\"https://octodemo.com/api/v3/users/rebelware/gists{/gist_id}\",\n            \"starred_url\":\"https://octodemo.com/api/v3/users/rebelware/starred{/owner}{/repo}\",\n            \"subscriptions_url\":\"https://octodemo.com/api/v3/users/rebelware/subscriptions\",\n            \"organizations_url\":\"https://octodemo.com/api/v3/users/rebelware/orgs\",\n            \"repos_url\":\"https://octodemo.com/api/v3/users/rebelware/repos\",\n            \"events_url\":\"https://octodemo.com/api/v3/users/rebelware/events{/privacy}\",\n            \"received_events_url\":\"https://octodemo.com/api/v3/users/rebelware/received_events\",\n            \"type\":\"Organization\",\n            \"site_admin\":false\n         },\n         \"repo\":{  \n            \"id\":1086,\n            \"name\":\"repoRequests\",\n            \"full_name\":\"rebelware/repoRequests\",\n            \"owner\":{  \n               \"login\":\"rebelware\",\n               \"id\":392,\n               \"avatar_url\":\"https://avatars.octodemo.com/u/392?\",\n               \"gravatar_id\":\"\",\n               \"url\":\"https://octodemo.com/api/v3/users/rebelware\",\n               \"html_url\":\"https://octodemo.com/rebelware\",\n               \"followers_url\":\"https://octodemo.com/api/v3/users/rebelware/followers\",\n               \"following_url\":\"https://octodemo.com/api/v3/users/rebelware/following{/other_user}\",\n               \"gists_url\":\"https://octodemo.com/api/v3/users/rebelware/gists{/gist_id}\",\n               \"starred_url\":\"https://octodemo.com/api/v3/users/rebelware/starred{/owner}{/repo}\",\n               \"subscriptions_url\":\"https://octodemo.com/api/v3/users/rebelware/subscriptions\",\n               \"organizations_url\":\"https://octodemo.com/api/v3/users/rebelware/orgs\",\n               \"repos_url\":\"https://octodemo.com/api/v3/users/rebelware/repos\",\n               \"events_url\":\"https://octodemo.com/api/v3/users/rebelware/events{/privacy}\",\n               \"received_events_url\":\"https://octodemo.com/api/v3/users/rebelware/received_events\",\n               \"type\":\"Organization\",\n               \"site_admin\":false\n            },\n            \"private\":false,\n            \"html_url\":\"https://octodemo.com/rebelware/repoRequests\",\n            \"description\":null,\n            \"fork\":false,\n            \"url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests\",\n            \"forks_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/forks\",\n            \"keys_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/keys{/key_id}\",\n            \"collaborators_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/collaborators{/collaborator}\",\n            \"teams_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/teams\",\n            \"hooks_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/hooks\",\n            \"issue_events_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/issues/events{/number}\",\n            \"events_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/events\",\n            \"assignees_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/assignees{/user}\",\n            \"branches_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/branches{/branch}\",\n            \"tags_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/tags\",\n            \"blobs_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/git/blobs{/sha}\",\n            \"git_tags_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/git/tags{/sha}\",\n            \"git_refs_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/git/refs{/sha}\",\n            \"trees_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/git/trees{/sha}\",\n            \"statuses_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/statuses/{sha}\",\n            \"languages_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/languages\",\n            \"stargazers_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/stargazers\",\n            \"contributors_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/contributors\",\n            \"subscribers_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/subscribers\",\n            \"subscription_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/subscription\",\n            \"commits_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/commits{/sha}\",\n            \"git_commits_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/git/commits{/sha}\",\n            \"comments_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/comments{/number}\",\n            \"issue_comment_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/issues/comments{/number}\",\n            \"contents_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/contents/{+path}\",\n            \"compare_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/compare/{base}...{head}\",\n            \"merges_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/merges\",\n            \"archive_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/{archive_format}{/ref}\",\n            \"downloads_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/downloads\",\n            \"issues_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/issues{/number}\",\n            \"pulls_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/pulls{/number}\",\n            \"milestones_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/milestones{/number}\",\n            \"notifications_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/notifications{?since,all,participating}\",\n            \"labels_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/labels{/name}\",\n            \"releases_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/releases{/id}\",\n            \"deployments_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/deployments\",\n            \"created_at\":\"2017-06-05T17:54:01Z\",\n            \"updated_at\":\"2017-06-05T17:54:01Z\",\n            \"pushed_at\":\"2017-06-06T15:19:27Z\",\n            \"git_url\":\"git://octodemo.com/rebelware/repoRequests.git\",\n            \"ssh_url\":\"git@octodemo.com:rebelware/repoRequests.git\",\n            \"clone_url\":\"https://octodemo.com/rebelware/repoRequests.git\",\n            \"svn_url\":\"https://octodemo.com/rebelware/repoRequests\",\n            \"homepage\":null,\n            \"size\":11,\n            \"stargazers_count\":0,\n            \"watchers_count\":0,\n            \"language\":null,\n            \"has_issues\":true,\n            \"has_downloads\":true,\n            \"has_wiki\":true,\n            \"has_pages\":false,\n            \"forks_count\":0,\n            \"mirror_url\":null,\n            \"open_issues_count\":7,\n            \"forks\":0,\n            \"open_issues\":7,\n            \"watchers\":0,\n            \"default_branch\":\"master\"\n         }\n      },\n      \"_links\":{  \n         \"self\":{  \n            \"href\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/pulls/14\"\n         },\n         \"html\":{  \n            \"href\":\"https://octodemo.com/rebelware/repoRequests/pull/14\"\n         },\n         \"issue\":{  \n            \"href\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/issues/14\"\n         },\n         \"comments\":{  \n            \"href\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/issues/14/comments\"\n         },\n         \"review_comments\":{  \n            \"href\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/pulls/14/comments\"\n         },\n         \"review_comment\":{  \n            \"href\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/pulls/comments{/number}\"\n         },\n         \"commits\":{  \n            \"href\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/pulls/14/commits\"\n         },\n         \"statuses\":{  \n            \"href\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/statuses/b7aaf67b9df7308c11f44c0a8ab4b232d25214d7\"\n         }\n      },\n      \"merged\":true,\n      \"mergeable\":null,\n      \"mergeable_state\":\"unknown\",\n      \"merged_by\":{  \n         \"login\":\"bryancross\",\n         \"id\":387,\n         \"avatar_url\":\"https://avatars.octodemo.com/u/387?\",\n         \"gravatar_id\":\"\",\n         \"url\":\"https://octodemo.com/api/v3/users/bryancross\",\n         \"html_url\":\"https://octodemo.com/bryancross\",\n         \"followers_url\":\"https://octodemo.com/api/v3/users/bryancross/followers\",\n         \"following_url\":\"https://octodemo.com/api/v3/users/bryancross/following{/other_user}\",\n         \"gists_url\":\"https://octodemo.com/api/v3/users/bryancross/gists{/gist_id}\",\n         \"starred_url\":\"https://octodemo.com/api/v3/users/bryancross/starred{/owner}{/repo}\",\n         \"subscriptions_url\":\"https://octodemo.com/api/v3/users/bryancross/subscriptions\",\n         \"organizations_url\":\"https://octodemo.com/api/v3/users/bryancross/orgs\",\n         \"repos_url\":\"https://octodemo.com/api/v3/users/bryancross/repos\",\n         \"events_url\":\"https://octodemo.com/api/v3/users/bryancross/events{/privacy}\",\n         \"received_events_url\":\"https://octodemo.com/api/v3/users/bryancross/received_events\",\n         \"type\":\"User\",\n         \"site_admin\":false\n      },\n      \"comments\":0,\n      \"review_comments\":0,\n      \"maintainer_can_modify\":false,\n      \"commits\":1,\n      \"additions\":1,\n      \"deletions\":0,\n      \"changed_files\":1\n   },\n   \"repository\":{  \n      \"id\":1086,\n      \"name\":\"repoRequests\",\n      \"full_name\":\"rebelware/repoRequests\",\n      \"owner\":{  \n         \"login\":\"rebelware\",\n         \"id\":392,\n         \"avatar_url\":\"https://avatars.octodemo.com/u/392?\",\n         \"gravatar_id\":\"\",\n         \"url\":\"https://octodemo.com/api/v3/users/rebelware\",\n         \"html_url\":\"https://octodemo.com/rebelware\",\n         \"followers_url\":\"https://octodemo.com/api/v3/users/rebelware/followers\",\n         \"following_url\":\"https://octodemo.com/api/v3/users/rebelware/following{/other_user}\",\n         \"gists_url\":\"https://octodemo.com/api/v3/users/rebelware/gists{/gist_id}\",\n         \"starred_url\":\"https://octodemo.com/api/v3/users/rebelware/starred{/owner}{/repo}\",\n         \"subscriptions_url\":\"https://octodemo.com/api/v3/users/rebelware/subscriptions\",\n         \"organizations_url\":\"https://octodemo.com/api/v3/users/rebelware/orgs\",\n         \"repos_url\":\"https://octodemo.com/api/v3/users/rebelware/repos\",\n         \"events_url\":\"https://octodemo.com/api/v3/users/rebelware/events{/privacy}\",\n         \"received_events_url\":\"https://octodemo.com/api/v3/users/rebelware/received_events\",\n         \"type\":\"Organization\",\n         \"site_admin\":false\n      },\n      \"private\":false,\n      \"html_url\":\"https://octodemo.com/rebelware/repoRequests\",\n      \"description\":null,\n      \"fork\":false,\n      \"url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests\",\n      \"forks_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/forks\",\n      \"keys_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/keys{/key_id}\",\n      \"collaborators_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/collaborators{/collaborator}\",\n      \"teams_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/teams\",\n      \"hooks_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/hooks\",\n      \"issue_events_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/issues/events{/number}\",\n      \"events_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/events\",\n      \"assignees_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/assignees{/user}\",\n      \"branches_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/branches{/branch}\",\n      \"tags_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/tags\",\n      \"blobs_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/git/blobs{/sha}\",\n      \"git_tags_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/git/tags{/sha}\",\n      \"git_refs_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/git/refs{/sha}\",\n      \"trees_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/git/trees{/sha}\",\n      \"statuses_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/statuses/{sha}\",\n      \"languages_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/languages\",\n      \"stargazers_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/stargazers\",\n      \"contributors_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/contributors\",\n      \"subscribers_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/subscribers\",\n      \"subscription_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/subscription\",\n      \"commits_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/commits{/sha}\",\n      \"git_commits_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/git/commits{/sha}\",\n      \"comments_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/comments{/number}\",\n      \"issue_comment_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/issues/comments{/number}\",\n      \"contents_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/contents/{+path}\",\n      \"compare_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/compare/{base}...{head}\",\n      \"merges_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/merges\",\n      \"archive_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/{archive_format}{/ref}\",\n      \"downloads_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/downloads\",\n      \"issues_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/issues{/number}\",\n      \"pulls_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/pulls{/number}\",\n      \"milestones_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/milestones{/number}\",\n      \"notifications_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/notifications{?since,all,participating}\",\n      \"labels_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/labels{/name}\",\n      \"releases_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/releases{/id}\",\n      \"deployments_url\":\"https://octodemo.com/api/v3/repos/rebelware/repoRequests/deployments\",\n      \"created_at\":\"2017-06-05T17:54:01Z\",\n      \"updated_at\":\"2017-06-05T17:54:01Z\",\n      \"pushed_at\":\"2017-06-06T15:19:27Z\",\n      \"git_url\":\"git://octodemo.com/rebelware/repoRequests.git\",\n      \"ssh_url\":\"git@octodemo.com:rebelware/repoRequests.git\",\n      \"clone_url\":\"https://octodemo.com/rebelware/repoRequests.git\",\n      \"svn_url\":\"https://octodemo.com/rebelware/repoRequests\",\n      \"homepage\":null,\n      \"size\":11,\n      \"stargazers_count\":0,\n      \"watchers_count\":0,\n      \"language\":null,\n      \"has_issues\":true,\n      \"has_downloads\":true,\n      \"has_wiki\":true,\n      \"has_pages\":false,\n      \"forks_count\":0,\n      \"mirror_url\":null,\n      \"open_issues_count\":7,\n      \"forks\":0,\n      \"open_issues\":7,\n      \"watchers\":0,\n      \"default_branch\":\"master\"\n   },\n   \"organization\":{  \n      \"login\":\"rebelware\",\n      \"id\":392,\n      \"url\":\"https://octodemo.com/api/v3/orgs/rebelware\",\n      \"repos_url\":\"https://octodemo.com/api/v3/orgs/rebelware/repos\",\n      \"events_url\":\"https://octodemo.com/api/v3/orgs/rebelware/events\",\n      \"hooks_url\":\"https://octodemo.com/api/v3/orgs/rebelware/hooks\",\n      \"issues_url\":\"https://octodemo.com/api/v3/orgs/rebelware/issues\",\n      \"members_url\":\"https://octodemo.com/api/v3/orgs/rebelware/members{/member}\",\n      \"public_members_url\":\"https://octodemo.com/api/v3/orgs/rebelware/public_members{/member}\",\n      \"avatar_url\":\"https://avatars.octodemo.com/u/392?\",\n      \"description\":\"Forging the next generation of Rebellious warez!\"\n   },\n   \"sender\":{  \n      \"login\":\"bryancross\",\n      \"id\":387,\n      \"avatar_url\":\"https://avatars.octodemo.com/u/387?\",\n      \"gravatar_id\":\"\",\n      \"url\":\"https://octodemo.com/api/v3/users/bryancross\",\n      \"html_url\":\"https://octodemo.com/bryancross\",\n      \"followers_url\":\"https://octodemo.com/api/v3/users/bryancross/followers\",\n      \"following_url\":\"https://octodemo.com/api/v3/users/bryancross/following{/other_user}\",\n      \"gists_url\":\"https://octodemo.com/api/v3/users/bryancross/gists{/gist_id}\",\n      \"starred_url\":\"https://octodemo.com/api/v3/users/bryancross/starred{/owner}{/repo}\",\n      \"subscriptions_url\":\"https://octodemo.com/api/v3/users/bryancross/subscriptions\",\n      \"organizations_url\":\"https://octodemo.com/api/v3/users/bryancross/orgs\",\n      \"repos_url\":\"https://octodemo.com/api/v3/users/bryancross/repos\",\n      \"events_url\":\"https://octodemo.com/api/v3/users/bryancross/events{/privacy}\",\n      \"received_events_url\":\"https://octodemo.com/api/v3/users/bryancross/received_events\",\n      \"type\":\"User\",\n      \"site_admin\":false\n   }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/pullrequest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pullrequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateRequestPR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"newRepoOwner\":\"rebelware\",\n\"newRepoName\":\"aName999\",\n\"newRepoTemplate\":\"default\",\n\"newRepoRequester\":\"someguy\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/createRepo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createRepo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server Reload Config",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/reloadConfig",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reloadConfig"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://octodemo.com/api/v3/repos/rebelware/aName/branches/master/protection?access_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.github.loki-preview+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "token XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"web\",\n    \"active\": true,\n    \"events\": [\n      \"push\",\n      \"pull_request\"\n    ],\n    \"config\": {\n      \"url\": \"https://5eb34f33.ngrok.io/pullrequest\",\n      \"content_type\": \"json\"\n    }\n  }"
+				},
+				"url": {
+					"raw": "https://octodemo.com/api/v3/repos/rebelware/aname-895/hooks",
+					"protocol": "https",
+					"host": [
+						"octodemo",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"repos",
+						"rebelware",
+						"aname-895",
+						"hooks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server Init",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Auth",
+						"value": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"token\":\"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/init",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"init"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "set Callback URL",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Auth",
+						"value": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"callbackURL\":\"https://9f8fe237.ngrok.io\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/setCallbackURL",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"setCallbackURL"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server Job Status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/status?jobID=0da9993b64f4f9f1b83e2f085ee31068c0609d82&format=json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"status"
+					],
+					"query": [
+						{
+							"key": "jobID",
+							"value": "0da9993b64f4f9f1b83e2f085ee31068c0609d82"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRMerge 1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "token XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.github.v3+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://octodemo.com/api/v3/repos/rebelware/repoRequests/pulls/301/merge",
+					"protocol": "https",
+					"host": [
+						"octodemo",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"repos",
+						"rebelware",
+						"repoRequests",
+						"pulls",
+						"301",
+						"merge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRMerge 2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "token XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.github.v3+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://octodemo.com/api/v3/repos/rebelware/repoRequests/pulls/302/merge",
+					"protocol": "https",
+					"host": [
+						"octodemo",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"repos",
+						"rebelware",
+						"repoRequests",
+						"pulls",
+						"302",
+						"merge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRMerge 3",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "token XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.github.v3+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://octodemo.com/api/v3/repos/rebelware/repoRequests/pulls/303merge",
+					"protocol": "https",
+					"host": [
+						"octodemo",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"repos",
+						"rebelware",
+						"repoRequests",
+						"pulls",
+						"303merge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateRequestPR 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"newRepoOwner\":\"rebelware\"\n,\"newRepoName\":\"aname-667\"\n,\"newRepoTemplate\":\"default\"\n,\"newRepoRequester\":\"someguy\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/createRepo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createRepo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Repo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"newRepoOwner\":\"rebelware\"\n,\"newRepoName\":\"aname-667\"\n,\"newRepoTemplate\":\"default\"\n,\"newRepoRequester\":\"someguy\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/createRepo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createRepo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateRequestPR 3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"newRepoOwner\":\"rebelware\"\n,\"newRepoName\":\"aName3\"\n,\"newRepoTemplate\":\"default\"\n,\"newRepoRequester\":\"someguy\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/createRepo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createRepo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server New config",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"global\": {\n    \"adminUsername\": \"bryancross\",\n    \"authType\": \"oauth\",\n    \"TemplateSource\": \"repository\",\n    \"TemplateSourceHost\": \"octodemo.com\",\n    \"TemplateSourceRepo\": \"rebelware/repo-template\",\n    \"TemplateSourcePath\": \"config/repo_templates\",\n    \"TemplateSourceBranch\": \"master\",\n    \"GitHubAPIURLPrefix\": \"/api/v3\",\n    \"repoDescriptionSuffix\": \" --Created by repo-template\",\n    \"commitMsg\": \"Committed by repo-template\",\n    \"workingDir\": \"./job\",\n    \"deleteTempDir\": false,\n    \"userAgent\": \"repo-template\",\n    \"listenOnPort\": 3000,\n    \"callback\": \"\",\n    \"jobsLimit\": 1000,\n    \"githubAPIDebug\": false,\n    \"statusCallbackURL\": \"https://650126af.ngrok.io/status\",\n    \"hubotBaseURL\": \"http://localhost:8080/\",\n    \"hubotRoomID\": \"C5R9AQS3F\",\n    \"repoRequestHost\": \"octodemo.com\",\n    \"repoRequestRepo\": \"rebelware/repoRequests\",\n    \"repoRequestBranch\": \"master\",\n    \"repoRequestPath\": \"/requests\",\n    \"repoRequestPRLabels\": [\n      \"Repo Request\"\n    ],\n    \"repoRequestPRAssignees\": [\n      \"admackbar\"\n    ]\n  }\n,\"persist\":true  \n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/reloadConfig",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reloadConfig"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

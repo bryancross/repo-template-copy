@@ -1,0 +1,116 @@
+{
+  "configName": "token-replacment",
+  "configType": "repository",
+  "repositoryAttributes": {
+    "name": "token-replacement",
+    "description": "Demonstrate replacing object names with token values",
+    "homepage": "https://github.com",
+    "private": false,
+    "has_issues": true,
+    "has_projects": true,
+    "has_wiki": true,
+    "auto_init": true,
+    "gitignore_template": "",
+    "license_template": "mit",
+    "allow_rebase_merge": true,
+    "has_downloads": true,
+    "allow_squash_merge": true,
+    "allow_merge_commit": true,
+    "team_id":-1
+  },
+  "teams":
+    [
+      {
+        "team": "Developers",
+        "permission": "push"
+      },
+      {
+        "team": "DevLeads",
+        "permission": "admin"
+      }
+    ],
+  "branches":
+    [
+      {
+        "name": "master",
+        "protection":
+        {
+          "required_status_checks": {
+            "include_admins": true,
+            "strict": true,
+            "contexts": [
+              "continuous-integration/travis-ci"
+            ]
+          },
+          "required_pull_request_reviews": {
+            "include_admins": false
+          },
+          "enforce_admins": true,
+          "restrictions": {
+            "users": [
+              "Mario"
+            ],
+            "teams": [
+              "DevLeads"
+            ]
+          }
+        }
+      }
+,
+      {
+        "name": "develop",
+        "protection":
+        {
+          "required_status_checks": {
+            "include_admins": true,
+            "strict": true,
+            "contexts": [
+              "continuous-integration/travis-ci"
+            ]
+          },
+          "required_pull_request_reviews": {
+            "include_admins": false
+          },
+          "enforce_admins": true,
+          "restrictions": {
+            "users": [
+              "Mario"
+            ],
+            "teams": [
+              "Developers",
+              "DevLeads"
+            ]
+          }
+        }
+      }   
+    ],
+  "labels":
+  [
+    {
+      "name":"Exception",
+      "color":"fef2c0"
+    },
+    {
+      "name":"Repo Request",
+      "color":"1d76db"
+    }
+  ],
+  "directories":
+    [
+      "lib",
+      "config",
+      "test",
+      "script"
+    ],
+  "files":
+    [
+      {
+          "file": "./repo_files/CONTRIBUTING.md",
+        "location": "/"
+      },
+      {
+          "file": "./repo_files/CHANGELOG.md",
+        "location": "/"
+      }
+    ]
+}

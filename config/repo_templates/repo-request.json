@@ -1,0 +1,82 @@
+{
+  "configName": "repo-request",
+  "configType": "repository",
+  "owningOrganization": "bryancross",
+  "repositoryAttributes": {
+    "name": "repo-request",
+    "description": "Default description",
+    "homepage": "https://github.com",
+    "private": false,
+    "has_issues": true,
+    "has_projects": true,
+    "has_wiki": true,
+    "auto_init": true,
+    "gitignore_template": "",
+    "license_template": "mit",
+    "allow_rebase_merge": true,
+    "has_downloads": true,
+    "allow_squash_merge": true,
+    "allow_merge_commit": true,
+    "team_id":-1
+  },
+  "teams":
+    [
+      {
+        "team": "Developers",
+        "permission": "push"
+      },
+      {
+        "team": "DevLeads",
+        "permission": "admin"
+      }
+    ],
+  "labels":
+  [
+    {
+      "name":"Exception",
+      "color":"fef2c0"
+    },
+    {
+      "name":"Repo Request",
+      "color":"1d76db"
+    }
+  ],
+  "directories":
+    [
+      "lib",
+      "config",
+      "test",
+      "script"
+    ],
+  "webhooks":
+  [
+    {
+      "name": "web",
+      "active": true,
+      "events": [
+        "pull_request",
+        "push"
+      ],
+      "config": {
+        "content_type": "json",
+        "url": "https://7b224666.ngrok.io/pullrequest"
+      }
+    }
+  ],
+  "files":
+    [
+      {
+          "file": "./repo_files/CONTRIBUTING.md",
+        "location": "/"
+      },
+      {
+          "file": "./repo_files/CHANGELOG.md",
+        "location": "/"
+      }
+      ,
+      {
+        "file": "./repo_files/SERVICES.md",
+        "location": "/"
+      }
+    ]
+}
