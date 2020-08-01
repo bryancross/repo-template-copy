@@ -12,13 +12,13 @@ to accept and store repository requests.  Learn more about how to configure this
 ### Getting Started
 
 1. Setup a repository to store your repository configuration pull requests (see  #request-repository below).
-1. Clone the `repo-template` repository.
-1. Run `./script/bootstrap.sh`
-1. Run `./script/tunnel.sh` to create an `ngrok` proxy for your webhooks to call.  Ensure your webhooks call this URL when you setup your Request Repository.
-1. Update the `callbackURL` attribute in `/config/config.json` with the URL created by ngrok. 
-1. Run ./script/repo_template.sh to start the server
+2. Clone the `repo-template` repository.
+3. Run `./script/bootstrap.sh`
+4. Run `./script/tunnel.sh` to create an `ngrok` proxy for your webhooks to call.  Ensure your webhooks call this URL when you setup your Request Repository.
+5. Update the `callbackURL` attribute in `/config/config.json` with the URL created by ngrok. 
+6. Run ./script/repo_template.sh to start the server
     `./script/repo_template.sh start`
-1. Make a REST call to the GET `/init` endpoint.  Include a properly scoped PAT in the Authentication header.
+7. Make a REST call to the GET `/init` endpoint.  Include a properly scoped PAT in the Authentication header.
   - You can use the `Server Init` request in the Postman collection (in `/tests/repo-template.postman_collection.json`)
   - cURL: 
 
@@ -29,7 +29,7 @@ curl --location --request GET 'http://localhost:3000/init' \  # Default ngrok lo
 ```
 
 
-1. make a REST call to the POST `/createRepo` endpoint with the appropriate payload. 
+8. Make a REST call to the POST `/createRepo` endpoint with the appropriate payload. This will create a Pull Request in the Request Repo.  Note that you can manually created Pull Requests as well.  This endpoint facilitates automation outside of GitHub, e.g., chatOps
 ```javascript
 {"newRepoOwner":"OrgOrUser"
 ,"newRepoName":"aRepoName"
