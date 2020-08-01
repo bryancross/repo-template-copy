@@ -1,0 +1,30 @@
+{
+  "global": {
+    "adminUsername": "hubot",
+    "authType": "oauth",
+    "TemplateSourceHost": "github.com",
+    "TemplateSourceRepo": "bryancross/repo-template",
+    "TemplateSourcePath": "config/repo_templates",
+    "TemplateSourceBranch": "master",
+    "repoDescriptionSuffix": " -- Created by repo-template",
+    "commitMsg": "committed by repo-template",
+    "callbackURL": "<repo-template-server-external-URL>",
+    "userAgent": "repo-template",
+    "callback": "",
+    "jobsLimit": 1000,
+    "githubAPIDebug": false,
+    "hubotRoomID": "<hubot-room-id>",
+    "repoRequestHost": "github.com",
+    "repoRequestRepo": "<a-github-org>/<a-github-repo>",
+    "repoRequestBranch": "master",
+    "repoRequestPath": "/requests",
+    "persistLogsToFileSystem":true,
+    "logPath":"/logs",
+    "repoRequestPRLabels": [
+      "Repo Request"
+    ],
+    "repoRequestPRAssignees": [
+      "hubot"
+    ]
+  }
+}
